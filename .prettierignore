@@ -6,3 +6,5 @@ node_modules
 lerna.json
 .github
 out
+.husky
+next-env.d.ts
