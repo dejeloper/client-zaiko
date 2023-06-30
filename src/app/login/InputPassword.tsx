@@ -1,9 +1,13 @@
 'use client'
-import { useState } from 'react'
+import { type FC, useState } from 'react'
 import { Eye, EyeOff } from '@/components/icons'
 import { Input } from '@/components/Base'
 
-export const InputPassword = () => {
+interface Props {
+  color?: string
+}
+
+export const InputPassword: FC<Props> = ({ color }) => {
   const [isPasswordVisible, setPasswordVisible] = useState(false)
 
   const handleChangeTypePass = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -24,9 +28,15 @@ export const InputPassword = () => {
         title={isPasswordVisible ? 'Ocultar contraseña' : 'Mostrar contraseña'}
       >
         {isPasswordVisible ? (
-          <Eye styles={'absolute top-1/2 right-3 -translate-y-1/2'} />
+          <Eye
+            styles={'absolute top-1/2 right-3 -translate-y-1/2'}
+            color={color}
+          />
         ) : (
-          <EyeOff styles={'absolute top-1/2 right-3 -translate-y-1/2'} />
+          <EyeOff
+            styles={'absolute top-1/2 right-3 -translate-y-1/2'}
+            color={color}
+          />
         )}
       </button>
     </div>
