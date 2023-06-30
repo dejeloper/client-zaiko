@@ -16,7 +16,7 @@ export const Input: FC<Props> = ({
   className = '',
 }) => {
   const styleDefault =
-    'placeholder:italic placeholder:text-slate-400 p-2 rounded-lg bg-white w-full border border-slate-400 focus:outline-none focus:border-principal focus:ring-sky-500 focus:ring-1 sm:text-sm'
+    'placeholder:italic placeholder:text-slate-400 bg-white w-full border border-slate-400 rounded-md p-2 focus:outline-none focus:border-principal focus:ring-sky-500 focus:ring-1 sm:text-sm'
 
   return (
     <input
@@ -24,7 +24,7 @@ export const Input: FC<Props> = ({
       id={id}
       name={name}
       placeholder={placeholder}
-      className={`${styleDefault} ${className}`}
+      className={`${className} ${styleDefault} `}
     />
   )
 }
