@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { Eye, EyeOff } from '@/components/icons'
+import { Input } from '@/components/Base'
 
 export const InputPassword = () => {
   const [isPasswordVisible, setPasswordVisible] = useState(false)
@@ -11,9 +12,9 @@ export const InputPassword = () => {
   }
   return (
     <div className="relative">
-      <input
+      <Input
         type={isPasswordVisible ? 'text' : 'password'}
-        className="p-2 rounded-lg border w-full"
+        className="w-full"
         id="password"
         name="password"
         placeholder="Contraseña"
@@ -23,17 +24,9 @@ export const InputPassword = () => {
         title={isPasswordVisible ? 'Ocultar contraseña' : 'Mostrar contraseña'}
       >
         {isPasswordVisible ? (
-          <Eye
-            size={22}
-            color={'gray'}
-            styles={'absolute top-1/2 right-3 -translate-y-1/2'}
-          />
+          <Eye styles={'absolute top-1/2 right-3 -translate-y-1/2'} />
         ) : (
-          <EyeOff
-            size={22}
-            color={'gray'}
-            styles={'absolute top-1/2 right-3 -translate-y-1/2'}
-          />
+          <EyeOff styles={'absolute top-1/2 right-3 -translate-y-1/2'} />
         )}
       </button>
     </div>

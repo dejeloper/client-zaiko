@@ -1,3 +1,4 @@
+import { Input } from '@/components/Base'
 import { InputPassword } from './InputPassword'
 
 const Login = () => {
@@ -8,16 +9,16 @@ const Login = () => {
           <h2 className="font-bold text-2xl text-principal">
             Inicio de Sesión
           </h2>
-          <p className="text-sm mt-4 text-principal">
+          <p className="text-xs mt-3 text-principal">
             Si está registrado, ingrese fácilmente
           </p>
           <form className="flex flex-col gap-4">
-            <input
+            <Input
               type="text"
-              className="p-2 mt-8 rounded-lg border"
               id="user"
               name="user"
               placeholder="Usuario"
+              className="mt-8"
             />
             <InputPassword />
             <button className="bg-principal rounded-xl text-white py-2">
@@ -31,11 +32,11 @@ const Login = () => {
             <hr className="border-gray-400" />
           </div>
 
-          <div className="mt-5 text-xs border-b border-[#002D74] py-4 text-[#002D74]">
+          <div className="mt-5 text-xs border-b border-principal py-4 text-principal">
             <a href="#">¿Olvidó su contraseña?</a>
           </div>
 
-          <div className="mt-3 text-xs flex justify-between items-center text-[#002D74]">
+          <div className="mt-3 text-xs flex justify-between items-center text-principal">
             <p>¿No tiene cuenta?</p>
             <button className="py-2 px-5 bg-white border rounded-xl hover:scale-110 duration-300">
               Regístrese
