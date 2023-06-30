@@ -1,4 +1,4 @@
-import { Input } from '@/components/Base'
+import { InputIcon } from '@/components/Base'
 import { InputPassword } from './InputPassword'
 
 const Login = () => {
@@ -12,13 +12,13 @@ const Login = () => {
           <p className="text-xs mt-3 text-principal">
             Si está registrado, ingrese fácilmente
           </p>
-          <form className="flex flex-col gap-4">
-            <Input
+          <form className="flex flex-col gap-4 mt-8">
+            <InputIcon
               type="text"
               id="user"
               name="user"
               placeholder="Usuario"
-              className="mt-8"
+              icon="user"
             />
             <InputPassword />
             <button className="bg-principal rounded-xl text-white py-2">
