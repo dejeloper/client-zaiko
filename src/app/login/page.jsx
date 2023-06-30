@@ -27,7 +27,11 @@ const Login = () => {
                 name="password"
                 placeholder="Contraseña"
               />
-              <Eye size={22} color={'gray'} />
+              <Eye
+                size={22}
+                color={'gray'}
+                styles={'absolute top-1/2 right-3 -translate-y-1/2'}
+              />
             </div>
             <button className="bg-principal rounded-xl text-white py-2">
               Ingresar
