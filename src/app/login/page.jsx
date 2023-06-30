@@ -1,4 +1,4 @@
-import { Eye } from '@/components/icons'
+import { InputPassword } from './InputPassword'
 
 const Login = () => {
   return (
@@ -19,20 +19,7 @@ const Login = () => {
               name="user"
               placeholder="Usuario"
             />
-            <div className="relative">
-              <input
-                type="password"
-                className="p-2 rounded-lg border w-full"
-                id="password"
-                name="password"
-                placeholder="Contraseña"
-              />
-              <Eye
-                size={22}
-                color={'gray'}
-                styles={'absolute top-1/2 right-3 -translate-y-1/2'}
-              />
-            </div>
+            <InputPassword />
             <button className="bg-principal rounded-xl text-white py-2">
               Ingresar
             </button>
